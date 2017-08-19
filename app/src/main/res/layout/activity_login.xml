@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#fff"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2375de"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:id="@+id/layout_finish"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_back_white3x"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:text="返回"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:typeface="sans"
+                android:textSize="17sp"
+                android:text="用户登录"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View style="@style/line_horizontal"
+          android:layout_height="0.4dp"/>
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名："
+                android:textSize="17sp"
+                android:textColor="#444"
+                />
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="13dp"
+                android:hint="please input your name"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="17sp"
+                android:textColorHint="#ccc"/>
+        </LinearLayout>
+
+        <View style="@style/line_horizontal"
+              android:layout_height="0.6sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码："
+                android:textSize="17sp"
+                android:textColor="#444"
+                />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="13dp"
+                android:inputType="textPassword"
+                android:hint="please input your password"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="17sp"
+                android:textColorHint="#ccc"/>
+        </LinearLayout>
+        <View style="@style/line_horizontal"
+              android:layout_height="0.6sp"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机："
+                    android:textSize="17sp"
+                    android:textColor="#444"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="13dp"
+                    android:hint="please input your phone number"
+                    android:background="@null"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textSize="17sp"
+                    android:textColorHint="#ccc"/>
+            </LinearLayout>
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.6sp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_head"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:layout_collapseMode="parallax"
+                android:src="@drawable/icon_default1x"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="继续即表示同意"/>
+
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户注册》"
+            android:textColor="#2375de"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_recharge_press"
+        android:layout_marginLeft="20dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_achieve"/>
+
+
+
+
+</LinearLayout>

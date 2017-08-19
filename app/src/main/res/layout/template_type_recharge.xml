@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#fff"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_comsume_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="充值信息"
+                android:background="@drawable/selector_consume"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/cz_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textSize="15sp"
+                android:gravity="center_vertical|right"
+                android:textColor="#999999"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="卡号:"/>
+
+            <TextView
+                android:id="@+id/cz_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#666666"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#000"
+                android:text="￥:"/>
+
+            <TextView
+                android:id="@+id/cz_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:text="0.00"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cz_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="未充值"
+            android:textColor="#333"
+            android:textSize="14sp"/>
+
+        <View style="@style/line_horizontal"
+              android:layout_marginTop="10dp"
+              android:layout_height="0.5dp"/>
+    </LinearLayout>
+
+
+<TextView
+    android:id="@+id/txt_more"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:text="查看更多"
+    android:gravity="center"/>
+
+<View style="@style/line_horizontal"
+      android:background="#f5f5f5"
+      android:layout_height="10dp"/>
+
+
+
+
+</LinearLayout>

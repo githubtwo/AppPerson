@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#fff"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/layout_finish"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_black_back3x"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="首页"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#444444"
+                android:typeface="sans"
+                android:text="充值中心"/>
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <View style="@style/line_horizontal"
+          android:layout_height="0.4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_card"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:background="@null"
+                android:hint="请输入充值卡号"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textSize="17sp"
+                android:textColor="#444"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/img_card"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_card3x"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_remark"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注:"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="你好"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.4dp"
+                  android:background="#e5e5e5"
+                  android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_10"
+                        android:button="@null"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="10元"
+                        android:gravity="center"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_20"
+                        android:button="@null"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="20元"
+                        android:gravity="center"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_30"
+                        android:button="@null"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="30元"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_50"
+                        android:button="@null"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="50元"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_100"
+                        android:button="@null"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="100元"
+                        android:gravity="center"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/btn_200"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="200元"
+                        android:textColor="#2573de"
+                        android:background="@drawable/selector_recharge_check"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.4dp"
+                  android:background="#e5e5e5"
+                  android:layout_marginLeft="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="金        额 :"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edit_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入充值金额"
+                    android:textSize="15sp"
+                    android:enabled="false"
+                    android:layout_marginLeft="10dp"
+                    android:textColorHint="#cccccc"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:textColor="#333"/>
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.4dp"
+                  android:background="#e5e5e5"
+                  android:layout_marginLeft="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="支付方式 :"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_alipay3x"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.4dp"
+                  android:background="#e5e5e5"
+                  android:layout_marginLeft="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#50dbdbdb"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/icon_recharge_press"
+                    android:layout_marginLeft="20dp"
+                    android:text="充值"
+                    android:textColor="#fff"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/btn_recharge"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layout_recycler"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="清除记录"
+                    android:textColor="#2375de"/>
+
+            </LinearLayout>
+
+            <View style="@style/line_horizontal"
+                  android:layout_height="0.8dp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

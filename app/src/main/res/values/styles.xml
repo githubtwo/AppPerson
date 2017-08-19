@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+
+    <style name="AppTheme.ToolBar" parent="AppTheme">
+
+        <item name="titleTextColor">@android:color/white</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="line">
+        <item name="android:background">@color/bg_color</item>
+    </style>
+
+    <style name="line_horizontal" parent="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="line_vertical" parent="line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <!--挂失卡号theme -->
+    <style name="LossDialog" parent="android:style/Theme.Dialog">
+
+        <item name="android:windowBackground">@android:color/transparent</item> <!--背景颜色及和透明程度-->
+
+        <item name="android:windowNoTitle">true</item> <!--是否去除标题 -->
+
+        <item name="android:windowFrame">@null</item><!--是否去除边框-->
+
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+
+        <item name="android:backgroundDimEnabled">true</item> <!--是否模糊-->
+    </style>
+</resources>
