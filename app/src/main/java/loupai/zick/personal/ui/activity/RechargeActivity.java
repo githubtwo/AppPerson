@@ -35,6 +35,7 @@ import loupai.zick.personal.common.rx.RxHttpReponseCompat;
 import loupai.zick.personal.di.component.AppComponent;
 import loupai.zick.personal.ui.entity.Alipaybean;
 import loupai.zick.personal.ui.entity.Basebean;
+import loupai.zick.personal.ui.entity.WaterCard;
 
 /**
  * Created by Zick on 2017/6/26.
@@ -82,7 +83,7 @@ public class RechargeActivity extends BaseActivity implements View.OnClickListen
     public AppComponent mAppComponent;
     private Map<String, String> mMap = new HashMap<>();
     public static String card_no;
-
+    private List<WaterCard> mCardList = new ArrayList<>();
     private List<CheckBox> mBoxList = new ArrayList<>();
 
 
@@ -94,6 +95,14 @@ public class RechargeActivity extends BaseActivity implements View.OnClickListen
     @Override
     public void init(AppComponent appComponent) {
         mAppComponent = appComponent;
+        appComponent.provideApiService().getAllCard()
+                .compose(RxHttpReponseCompat.<List<WaterCard>>compatResult())
+                .subscribe(new ErrorHandlerSubscriber<List<WaterCard>>() {
+                    @Override
+                    public void onNext(List<WaterCard> waterCards) {
+                        mCardList = waterCards;
+                    }
+                });
 
 
         mImgCard.setOnClickListener(this);
@@ -145,8 +154,10 @@ public class RechargeActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.btn_recharge:
 
+                Log.e("money",mEditInput.getText().toString());
+                Log.e("code",mCardList.get(0).getCode());
                 if(mEditInput.getText().toString() != null){
-                    mAppComponent.provideApiService().postRecharge(mEditInput.getText().toString())
+                    mAppComponent.provideApiService().postRecharge(mCardList.get(0).getCode(),mEditInput.getText().toString())
                             .compose(RxHttpReponseCompat.<Basebean<String>>compatOrigin())
                             .subscribe(new ErrorHandlerSubscriber<Basebean<String>>() {
                                 @Override
@@ -315,8 +326,8 @@ public class RechargeActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
         super.onCreate(savedInstanceState);
+        EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
     }

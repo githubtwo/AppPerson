@@ -1,10 +1,12 @@
 package loupai.zick.personal.data;
 
+import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Observable;
 import loupai.zick.personal.ui.entity.Basebean;
 import loupai.zick.personal.ui.entity.User;
+import loupai.zick.personal.ui.entity.WaterCard;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -15,8 +17,8 @@ import retrofit2.http.QueryMap;
  */
 
 public interface ApiService {
-//    public static final String BASE_URL = "http://172.16.0.204:8088/";
     public static final String BASE_URL = "http://47.93.243.239:8080/mmall/";
+    //public static final String BASE_URL = "http://172.16.0.118:8080/";
 
     @GET("user/login")
     Observable<Basebean<User>> login(@QueryMap Map<String,String> map);//登录
@@ -36,7 +38,10 @@ public interface ApiService {
 
     // /app/recharge
     @POST("order/pay")
-    Observable<Basebean<String>> postRecharge(@Query("number") String number);  //
+    Observable<Basebean<String>> postRecharge(@Query("cardNo")String cardNo,@Query("money") String money);  //
+
+    @GET("card/getAllCard")
+    Observable<Basebean<List<WaterCard>>> getAllCard();
 
 
 
